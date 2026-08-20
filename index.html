@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bonterra Biogreen — Agricultura con-ciencia</title>
+<meta name="description" content="Biofertilizantes de alto rendimiento formulados con microorganismos benéficos y nebulizadores de fumigación. Envíos a todo el Perú desde Moquegua.">
+<link rel="icon" href="./assets/logo.png">
+<style>
+  :root{
+    --verde:#00A827;
+    --verde-osc:#046B22;
+    --verde-prof:#023F16;
+    --naranja:#D27331;
+    --naranja-osc:#A8541E;
+    --tinta:#2B2B2B;
+    --gris:#5C5C5C;
+    --crema:#FAF7F0;
+    --linea:#E6E0D4;
+    --sombra:0 10px 30px rgba(2,63,22,.10);
+    --radio:16px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--crema);
+    color:var(--tinta);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+  }
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* ---------- Header ---------- */
+  .ribbon{
+    background:var(--verde-prof);color:#DCEFD8;
+    font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;
+    text-align:center;padding:7px 16px;
+  }
+  .ribbon b{color:#fff;font-weight:600}
+  header{
+    position:sticky;top:0;z-index:20;
+    background:rgba(250,247,240,.94);
+    backdrop-filter:saturate(1.4) blur(8px);
+    border-bottom:1px solid var(--linea);
+  }
+  .nav{display:flex;align-items:center;gap:14px;padding:12px 20px;max-width:1120px;margin:0 auto}
+  .nav .logo{width:46px;height:46px;border-radius:12px;flex:0 0 auto;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+  .nav .marca{display:flex;flex-direction:column;line-height:1.15;margin-right:auto}
+  .nav .marca strong{font-size:19px;letter-spacing:-.01em}
+  .nav .marca span{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gris)}
+  .nav nav{display:none;gap:22px;font-size:15px;color:var(--gris)}
+  .nav nav a{text-decoration:none}
+  .nav nav a:hover{color:var(--verde-osc)}
+  .btn{
+    display:inline-block;border-radius:999px;padding:12px 22px;
+    font-weight:650;font-size:15.5px;text-decoration:none;border:0;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn-verde{background:var(--verde);color:#fff;box-shadow:0 6px 18px rgba(0,168,39,.30)}
+  .btn-verde:hover{background:var(--verde-osc)}
+  .btn-naranja{background:var(--naranja);color:#fff;box-shadow:0 6px 18px rgba(210,115,49,.30)}
+  .btn-naranja:hover{background:var(--naranja-osc)}
+  .btn-linea{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+  .btn-linea:hover{background:rgba(255,255,255,.12)}
+  .nav .btn{padding:10px 18px;font-size:14.5px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;
+    background:
+      radial-gradient(1200px 500px at 88% 8%, rgba(210,115,49,.55), transparent 62%),
+      linear-gradient(140deg, #023F16 0%, #046B22 42%, #00A827 78%, #4FB742 100%);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:auto 0 -1px 0;height:80px;
+    background:linear-gradient(to bottom, transparent, var(--crema));
+    pointer-events:none;
+  }
+  .hero-in{
+    display:grid;grid-template-columns:1fr;gap:34px;align-items:center;
+    padding:58px 20px 80px;max-width:1120px;margin:0 auto;position:relative;z-index:1;
+  }
+  .tag{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
+    border-radius:999px;padding:6px 14px;font-size:13px;letter-spacing:.04em;
+    text-transform:uppercase;font-weight:600;margin-bottom:18px;
+  }
+  .hero h1{
+    margin:0 0 16px;font-size:clamp(32px,6vw,54px);line-height:1.08;
+    letter-spacing:-.02em;font-weight:800;
+  }
+  .hero h1 em{font-style:normal;color:#FFD9A8}
+  .hero p.lead{margin:0 0 26px;font-size:clamp(16.5px,2.2vw,19.5px);color:#E8F5E3;max-width:48ch}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:34px}
+  .hero-stats div{min-width:110px}
+  .hero-stats b{display:block;font-size:24px;font-weight:800;letter-spacing:-.01em}
+  .hero-stats span{font-size:13.5px;color:#CFE7C9}
+  .hero-art{position:relative}
+  .panel{
+    background:#fff;border-radius:20px;overflow:hidden;max-width:440px;margin:0 auto;
+    box-shadow:0 24px 60px rgba(0,0,0,.32);
+  }
+  .panel img{width:100%;height:170px;object-fit:cover}
+  .panel ul{margin:0;padding:18px 20px 20px;list-style:none;display:grid;gap:12px}
+  .panel li{
+    position:relative;padding-left:30px;color:var(--tinta);
+    font-size:15px;line-height:1.45;font-weight:550;
+  }
+  .panel li::before{
+    content:"";position:absolute;left:0;top:3px;width:19px;height:19px;border-radius:50%;
+    background:var(--verde);
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='11' fill='black'/></svg>") center/contain no-repeat;
+            mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='11' fill='black'/></svg>") center/contain no-repeat;
+  }
+  .panel li::after{
+    content:"";position:absolute;left:5px;top:8px;width:9px;height:5px;
+    border-left:2.2px solid #fff;border-bottom:2.2px solid #fff;transform:rotate(-45deg);
+  }
+
+  /* ---------- Secciones ---------- */
+  section{padding:66px 0}
+  .kicker{
+    font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--naranja-osc);font-weight:700;margin:0 0 10px;
+  }
+  h2{margin:0 0 12px;font-size:clamp(26px,4vw,36px);line-height:1.15;letter-spacing:-.02em;font-weight:800}
+  .sub{margin:0 0 34px;color:var(--gris);max-width:62ch;font-size:17px}
+
+  .grid{display:grid;gap:20px;grid-template-columns:1fr}
+  .card{
+    background:#fff;border:1px solid var(--linea);border-radius:var(--radio);
+    overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;
+  }
+  .card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .card .body{padding:18px 20px 22px}
+  .card h3{margin:0 0 7px;font-size:19px;letter-spacing:-.01em}
+  .card p{margin:0;color:var(--gris);font-size:15.5px;line-height:1.55}
+
+  /* Productos */
+  .prods{display:grid;gap:14px;grid-template-columns:1fr}
+  .prod{
+    background:#fff;border:1px solid var(--linea);border-left:4px solid var(--verde);
+    border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;
+  }
+  .prod:nth-child(even){border-left-color:var(--naranja)}
+  .prod .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .prod strong{font-size:16.5px;letter-spacing:-.01em}
+  .prod .precio{font-weight:800;color:var(--verde-osc);white-space:nowrap;font-size:16.5px}
+  .prod span.desc{color:var(--gris);font-size:15px;line-height:1.5}
+  .nota{margin-top:20px;color:var(--gris);font-size:15px}
+
+  /* Pasos */
+  .pasos-band{background:#fff;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+  .pasos{display:grid;gap:18px;grid-template-columns:1fr;counter-reset:p}
+  .paso{position:relative;padding-left:56px}
+  .paso::before{
+    counter-increment:p;content:counter(p);
+    position:absolute;left:0;top:0;width:40px;height:40px;border-radius:12px;
+    background:linear-gradient(140deg,var(--verde),var(--verde-osc));color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;
+    box-shadow:0 6px 16px rgba(0,168,39,.28);
+  }
+  .paso h3{margin:6px 0 5px;font-size:17.5px}
+  .paso p{margin:0;color:var(--gris);font-size:15.5px}
+
+  .aviso{
+    margin-top:28px;background:#FFF6EC;border:1px solid #F1D9BF;border-radius:14px;
+    padding:16px 18px;color:#7A4A1C;font-size:15.5px;
+  }
+
+  /* Franja packs */
+  .packs{
+    background:linear-gradient(140deg,#023F16,#046B22 60%,#0C7C2A);
+    color:#fff;border-radius:22px;padding:34px 26px;box-shadow:var(--sombra);
+  }
+  .packs h2{color:#fff}
+  .packs .sub{color:#CFE7C9}
+  .packs ul{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+  .packs li{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:14px 16px;font-size:15.5px}
+  .packs li b{display:block;margin-bottom:3px;color:#FFD9A8}
+
+  /* Footer */
+  footer{background:var(--verde-prof);color:#CFE7C9;padding:48px 0 34px;font-size:15.5px}
+  .foot{display:grid;gap:26px;grid-template-columns:1fr}
+  footer h4{margin:0 0 8px;color:#fff;font-size:16px;letter-spacing:.02em}
+  footer a{color:#fff}
+  footer .logo-foot{width:56px;height:56px;border-radius:14px;margin-bottom:12px}
+  .foot-bottom{
+    margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:13.5px;color:#A9CCA3;
+  }
+  .zonas{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .zonas span{background:rgba(255,255,255,.12);border-radius:999px;padding:5px 12px;font-size:13.5px;color:#fff}
+  .espacio-widget{height:78px}
+
+  @media (min-width:720px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .prods{grid-template-columns:repeat(2,1fr)}
+    .pasos{grid-template-columns:repeat(2,1fr)}
+    .packs ul{grid-template-columns:repeat(3,1fr)}
+    .foot{grid-template-columns:1.4fr 1fr 1fr}
+    .nav nav{display:flex}
+    .packs{padding:44px 40px}
+  }
+  @media (min-width:980px){
+    .hero-in{grid-template-columns:1.15fr .85fr;padding:76px 20px 104px}
+    .grid{grid-template-columns:repeat(4,1fr)}
+    .prods{grid-template-columns:repeat(3,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Demo construido por <b>IJV Agency</b> · sitio de muestra, no oficial</div>
+
+<header>
+  <div class="nav">
+    <img class="logo" src="./assets/logo.png" alt="Logo de Bonterra Biogreen">
+    <div class="marca">
+      <strong>Bonterra Biogreen</strong>
+      <span>Agricultura con-ciencia</span>
+    </div>
+    <nav>
+      <a href="#lineas">Líneas</a>
+      <a href="#productos">Productos</a>
+      <a href="#comprar">Cómo comprar</a>
+    </nav>
+    <a class="btn btn-verde" href="#comprar">Pide tu asesoría</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="tag">Biofertilizantes formulados con ciencia</div>
+      <h1>Biofertilizantes que tu cultivo <em>sí aprovecha</em></h1>
+      <p class="lead">
+        Formulación con microorganismos benéficos —micorrizas y rizobacterias—, extractos
+        vegetales y correctores nutricionales para frutales, hortalizas y cultivos de pan
+        llevar. Sumamos nebulizadores de fumigación para que cubras más campo en menos tiempo.
+        Despachamos a todo el Perú desde Moquegua.
+      </p>
+      <div class="cta">
+        <a class="btn btn-naranja" href="#comprar">Quiero una recomendación</a>
+        <a class="btn btn-linea" href="#productos">Ver productos y precios</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>+20</b><span>productos de la línea</span></div>
+        <div><b>2020</b><span>fabricando en Moquegua</span></div>
+        <div><b>Todo el Perú</b><span>envíos por agencia</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="panel">
+        <img src="./assets/hero-campo.jpg" alt="Campo de cultivo al amanecer">
+        <ul>
+          <li>Formulados con microorganismos benéficos: micorrizas y rizobacterias</li>
+          <li>Varios empaques de la línea son Made in Canada</li>
+          <li>Ves foto y video de tu paquete con tu nombre antes de pagar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="lineas">
+  <div class="wrap">
+    <p class="kicker">Nuestras líneas</p>
+    <h2>Todo lo que tu campo necesita, de la siembra a la cosecha</h2>
+    <p class="sub">
+      No vendemos productos sueltos: armamos el acompañamiento del ciclo completo según
+      tu cultivo, la etapa en la que estás y el área que manejas.
+    </p>
+    <div class="grid">
+      <article class="card">
+        <img src="./assets/post-xtract-supreme.jpg" alt="Bonterra Xtract Supreme activando la microbiología del suelo">
+        <div class="body">
+          <h3>Suelo vivo y raíz activa</h3>
+          <p>Biofertilizantes que activan la microbiología del suelo y mejoran la absorción desde la raíz, para que la planta aproveche lo que le das.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="./assets/post-fertilizante.jpg" alt="Campaña: gastas en fertilizante y no se nota">
+        <div class="body">
+          <h3>Que tu fertilización rinda más</h3>
+          <p>Potenciadores que optimizan el rendimiento de tus fertilizantes de fondo: menos nutrientes perdidos y mayor retorno de la inversión.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="./assets/post-kaliber.jpg" alt="Comparación de paltas con y sin K-Aliber">
+        <div class="body">
+          <h3>Calidad y tamaño de fruto</h3>
+          <p>Potasio, giberelinas y correctores nutricionales para mejorar el llenado, la estructura y el calibre de la cosecha.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="./assets/post-nebulizador.jpg" alt="Nebulizador Bonterra de acero inoxidable en pleno campo">
+        <div class="body">
+          <h3>Nebulizadores de fumigación</h3>
+          <p>Acero inoxidable, barra telescópica y filtro antiimpurezas. Cobertura amplia con atomización uniforme: fumigas más en menos tiempo.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="productos" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Productos destacados</p>
+    <h2>Precios claros, sin vueltas</h2>
+    <p class="sub">
+      Estos son algunos de los más pedidos. La línea completa tiene más de veinte
+      productos, y varios de los empaques son <strong>Made in Canada</strong>: producto
+      importado, formulado con microorganismos benéficos.
+    </p>
+    <div class="prods">
+      <div class="prod">
+        <div class="top"><strong>Bonterra Induction</strong><span class="precio">S/ 750</span></div>
+        <span class="desc">Inductor de defensas naturales. El tope de la línea de inducción en frutales.</span>
+      </div>
+      <div class="prod">
+        <div class="top"><strong>Kontroller +</strong><span class="precio">S/ 650</span></div>
+        <span class="desc">Preventivo y correctivo contra hongos patógenos. Cuida la sanidad del cultivo.</span>
+      </div>
+      <div class="prod">
+        <div class="top"><strong>Bonterra Strawberries</strong><span class="precio">S/ 650</span></div>
+        <span class="desc">Solución especializada para fresa y berries en todo su desarrollo.</span>
+      </div>
+      <div class="prod">
+        <div class="top"><strong>Bonterra Xtract Supreme</strong><span class="precio">S/ 550</span></div>
+        <span class="desc">Activa la microbiología del suelo y mejora la absorción desde la raíz.</span>
+      </div>
+      <div class="prod">
+        <div class="top"><strong>NPK-Plus</strong><span class="precio">S/ 300</span></div>
+        <span class="desc">Fórmula equilibrada y concentrada de nitrógeno, fósforo y potasio.</span>
+      </div>
+      <div class="prod">
+        <div class="top"><strong>K-Aliber</strong><span class="precio">S/ 100</span></div>
+        <span class="desc">Potasio y giberelinas altamente asimilables: mejor llenado de fruto y más resistencia al estrés.</span>
+      </div>
+    </div>
+    <p class="nota">
+      También manejamos Aminomax, Promotor, Cabzinc, Magphos, Siliciumx, Seaweed Xtract,
+      Full-Max, Catalizador, Beauveria Bassiana, Vechtor, jabón potásico y melaza.
+      Escríbenos por el chat y te decimos cuál le toca a tu cultivo.
+    </p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="packs">
+      <p class="kicker" style="color:#FFD9A8">Packs por cultivo</p>
+      <h2>Un paquete completo, de inicio a fin de campaña</h2>
+      <p class="sub">
+        Te armamos la combinación según tu cultivo y la etapa. Estas son referencias:
+        la composición final y el precio los cierra tu asesor.
+      </p>
+      <ul>
+        <li><b>Frutales</b>Palta, cítricos y tuna: arranque, defensa de la planta, y llenado y calidad de fruto.</li>
+        <li><b>Pan llevar y hortalizas</b>Cebolla, ajo, papa y maíz: nutrición equilibrada más control de hongos si hay presión.</li>
+        <li><b>Fresa y berries</b>Línea especializada con correctores de calcio, boro, zinc y silicio.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="pasos-band">
+  <section id="comprar">
+    <div class="wrap">
+      <p class="kicker">Cómo comprar</p>
+      <h2>Primero ves tu paquete, después pagas</h2>
+      <p class="sub">
+        Sabemos que en el campo hay desconfianza con las compras por internet, y con razón.
+        Por eso nuestro proceso es al revés del resto.
+      </p>
+      <div class="pasos">
+        <div class="paso">
+          <h3>Conversamos tu cultivo</h3>
+          <p>Nos cuentas qué siembras, en qué etapa está y cuánta área o cuántas plantas manejas.</p>
+        </div>
+        <div class="paso">
+          <h3>Te armamos la recomendación</h3>
+          <p>Producto o pack a tu medida, con la dosis aproximada y el costo estimado de la campaña.</p>
+        </div>
+        <div class="paso">
+          <h3>Ves tu paquete con tu nombre</h3>
+          <p>Preparamos el pedido y te enviamos foto y video del paquete rotulado con tu nombre, antes de cualquier pago.</p>
+        </div>
+        <div class="paso">
+          <h3>Recién ahí pagas</h3>
+          <p>Te compartimos las cuentas de BCP, Interbank y BBVA. Pagas 50% al despacho y 50% al recojo, o el total. También trabajamos con letras y emitimos factura.</p>
+        </div>
+      </div>
+      <p class="aviso">
+        No manejamos links de pago ni pasarelas en línea. El cierre siempre lo hace
+        un asesor de Bonterra contigo, por WhatsApp o por teléfono.
+      </p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img class="logo-foot" src="./assets/logo.png" alt="Bonterra Biogreen">
+        <h4>Bonterra Biogreen</h4>
+        <p style="margin:0">
+          Biofertilizantes de alto rendimiento y nebulizadores de fumigación.
+          Agricultura con-ciencia desde 2020.
+        </p>
+      </div>
+      <div>
+        <h4>Cobertura</h4>
+        <p style="margin:0">Enviamos a todo el Perú por agencia de transporte, desde Moquegua.</p>
+        <div class="zonas">
+          <span>Moquegua</span><span>Arequipa</span><span>Tacna</span><span>Ilo</span><span>Camaná</span>
+        </div>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p style="margin:0 0 12px">
+          WhatsApp <a href="https://wa.me/51925855343">+51 925 855 343</a><br>
+          Moquegua, Perú
+        </p>
+        <a class="btn btn-naranja" href="https://wa.me/51925855343">Escribir por WhatsApp</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Bonterra Biogreen — Agricultura con-ciencia</span>
+      <span><a href="/politica-privacidad">Política de privacidad</a></span>
+    </div>
+    <div class="espacio-widget"></div>
+  </div>
+</footer>
+
+  <div data-ijv-demo-badge style="position:relative;z-index:1;padding:14px 16px 90px;text-align:center;font:400 12px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#94a3b8;background:#0f172a">
+    Demo preparada por <a href="https://ijvagency.com/" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:underline">IJV Agency</a> para Bonterra Biogreen — sitio de muestra, no es la web oficial.
+  </div>
+  <script>
+window["bonterraAgentConfig"] = Object.assign(window["bonterraAgentConfig"] || {}, { webhook: "https://meta.ijvagency.com/webhook/bonterra-demo-agent", leadsWebhook: "https://meta.ijvagency.com/webhook/bonterra-demo-leads" });
+/* ============================================================================
+ * BONTERRA BIOGREEN — Widget de chat embebible (IJV Agency)
+ * ----------------------------------------------------------------------------
+ * Generado por IJV Factory — NO editar a mano: cambios van al factory.config.json
+ * y se regenera. Patrón canónico extraído de mmdent/widget/agent.js.
+ *
+ * Distribución recomendada vía jsDelivr (repo público):
+ *   https://cdn.jsdelivr.net/gh/nachojr2003/bonterra-site@main/widget/agent.js
+ *
+ * Uso en el sitio del cliente:
+ *   <script>
+ *     window.bonterraAgentConfig = { }; // overrides opcionales — los defaults van embebidos
+ *   <\/script>
+ *   <script src=".../widget/agent.js" defer><\/script>
+ *
+ * Sin dependencias externas. IIFE puro, vanilla JS (ES5).
+ * ============================================================================ */
+(function () {
+  'use strict';
+
+  /* ---------------- Config con DEFAULTS embebidos (regla #11: si el
+   * integrador pasa config parcial, NADA queda undefined) ---------------- */
+  var DEFAULTS = {
+    n8nBase:        "https://meta.ijvagency.com",
+    webhook:        null,
+    leadsWebhook:   null,
+    privacyUrl:     '/politica-privacidad',
+    logoUrl:        "https://bonterra-demo.vercel.app/logo.png",
+    primary:        '#00A827',
+    secondary:      '#D27331',
+    accent:         '#F5F5F5',
+    fontFamily:     "Inter,system-ui,-apple-system,'Segoe UI',sans-serif,'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji'",
+    timeoutMs:      45000,   /* >= 30s: queries con RAG completo cortan a 15s (regla #10).
+                              * 45000 y no 40000: la espera real que ve el usuario es
+                              * timeoutMs × (1 + maxRetries), así que el knob que importa
+                              * es maxRetries. Un turno vivo nunca llega a 40s (RAG p99
+                              * ~10s + self-call del retry-on-empty ~5s, regla #84): entre
+                              * 40 y 45 solo cambia cuánto tarda en rendirse lo ya muerto. */
+    maxRetries:     1,
+    typewriter:     true,
+    typewriterCps:  90,
+    agentName:      "Valeria",
+    clientName:     "Bonterra Biogreen",
+    /* Subtítulo del encabezado: dice a QUÉ ATIENDE el agente, nunca qué es. Una
+     * etiqueta de bot aquí lo delata antes de que escriba una palabra (regla
+     * #114). Se personaliza con `agente.subtitulo_widget` en el config. */
+    headerSubtitle: "Asesoría técnica agrícola",
+
+    whatsappNumber: "+51 925 855 343",
+    whatsappLink:   "https://wa.me/51925855343",
+
+
+    welcomeMessage: "Hola, soy Valeria, del equipo de Bonterra Biogreen 🌱 Te ayudo a elegir el producto o el pack que le cae bien a tu cultivo y a calcular cuánto necesitas. Cuéntame, ¿qué estás sembrando?"
+  };
+  var CFG = window.bonterraAgentConfig = window.bonterraAgentConfig || {};
+  for (var k in DEFAULTS) { if (CFG[k] === undefined || CFG[k] === null) CFG[k] = DEFAULTS[k]; }
+  if (!CFG.webhook)      CFG.webhook      = CFG.n8nBase + '/webhook/bonterra-agent';
+  if (!CFG.leadsWebhook) CFG.leadsWebhook = CFG.n8nBase + '/webhook/bonterra-leads';
+
+  var QUICK_BUTTONS = [{"label":"Para mi cultivo","mensaje":"Quiero una recomendación para mi cultivo"},{"label":"Nebulizadores","mensaje":"Cuéntame de los nebulizadores de fumigación"},{"label":"Cómo comprar","mensaje":"¿Cómo hago para comprar y cómo es el pago?"}];
+
+  /* ---------------- Utilidades ---------------- */
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function parseMd(text) {
+    var s = escapeHtml(text);
+    s = s.replace(/```([\s\S]*?)```/g, function (_, c) { return '<pre>' + c + '</pre>'; });
+    s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+    s = s.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    s = s.replace(/(^|\s)(https?:\/\/[^\s<]+)/g,
+      '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+    s = s.replace(/(^|\n)- (.+)/g, '$1<li>$2</li>');
+    s = s.replace(/(<li>[\s\S]*?<\/li>)(?!\s*<li>)/g, '<ul>$1</ul>');
+    /* Regla #27: strip de placeholders alucinados por el LLM.
+       Restringido a placeholders CONOCIDOS: un strip genérico \[[a-z_]+\]
+       borraba texto legítimo entre corchetes (ej. "[PDF]", "[borrador]"). */
+    s = s.replace(/\{\{[^}]+\}\}/g, '').replace(/\{first_name\}/gi, '')
+      .replace(/\[(nombre|name|first_name|usuario|user)\]/gi, '');
+    /* Segunda capa: MARCAS INTERNAS del sistema. El nodo Finalize del workflow ya
+       las strippea; esto es la red por si un turno las deja pasar — el usuario
+       jamás debe leer "[CONSENT_OK]" ni "[PENDIENTE CLIENTE: precio]".
+       Lista EXPLÍCITA a propósito: un \[[A-Z_]{3,}\] genérico borraría texto
+       legítimo del negocio ("[PDF]", "[IVA]", "[RUC]") — misma lección que el
+       strip de placeholders de arriba (regla #27). Marca nueva en un workflow
+       ⇒ agregarla también aquí. */
+    s = s.replace(/\[\/?(CONSENT_OK|CONSENT|HANDOFF|ESCALATED|ESCALAR|LEAD_OK|NO_KB|IMG:[^\]]*|PENDIENTE[^\]]*)\]/gi, '');
+    s = s.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>');
+    return '<p>' + s + '</p>';
+  }
+  function uuid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+  /* Regla #61: TTL de inactividad — Cmd+Shift+R NO limpia sessionStorage; sin
+   * TTL la Simple Memory del agente arrastra la conversación vieja. */
+  var SESSION_TTL_MS = 30 * 60 * 1000;
+  var SS_PREFIX = 'bonterra_';
+  function getSessionId() {
+    var s = sessionStorage.getItem(SS_PREFIX + 'session_id');
+    var last = parseInt(sessionStorage.getItem(SS_PREFIX + 'session_last') || '0', 10);
+    var now = Date.now();
+    if (!s || (last && (now - last) > SESSION_TTL_MS)) {
+      s = uuid();
+      sessionStorage.setItem(SS_PREFIX + 'session_id', s);
+      sessionStorage.removeItem(SS_PREFIX + 'messages');
+    }
+    sessionStorage.setItem(SS_PREFIX + 'session_last', String(now));
+    return s;
+  }
+  function resetSession() {
+    sessionStorage.removeItem(SS_PREFIX + 'session_id');
+    sessionStorage.removeItem(SS_PREFIX + 'session_last');
+    sessionStorage.removeItem(SS_PREFIX + 'messages');
+    return getSessionId();
+  }
+
+  /* Persistencia de mensajes: sobreviven al refresh, no al cerrar la pestaña */
+  function loadMessages() {
+    try { return JSON.parse(sessionStorage.getItem(SS_PREFIX + 'messages') || '[]'); }
+    catch (e) { return []; }
+  }
+  function saveMessage(role, text) {
+    try {
+      var m = loadMessages();
+      m.push({ role: role, text: text });
+      if (m.length > 60) m = m.slice(-60);
+      sessionStorage.setItem(SS_PREFIX + 'messages', JSON.stringify(m));
+    } catch (e) { /* quota: silencioso */ }
+  }
+
+  /* ---------------- CSS inyectado ----------------
+   * Regla #15: CSS defensivo para <img> (librerías emoji del sitio convierten
+   * unicode a <img>; sin esto un 👋 sale de 600px) + fuentes emoji en la pila. */
+  var CSS = [
+    ':root{--ijv-primary:' + CFG.primary + ';--ijv-secondary:' + CFG.secondary + ';--ijv-accent:' + CFG.accent + ';}',
+    '.ijv-launcher{position:fixed;bottom:22px;right:22px;height:60px;padding:0 22px;border-radius:30px;background:#fff;color:var(--ijv-primary);border:0;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;z-index:2147483000;transition:transform .2s ease}',
+    '.ijv-launcher:hover{transform:scale(1.05)}',
+    '.ijv-launcher img{height:36px;width:auto;display:block;object-fit:contain}',
+    '.ijv-root *,.ijv-root *::before,.ijv-root *::after{box-sizing:border-box}',
+    '.ijv-root{position:fixed;bottom:100px;right:22px;width:380px;max-width:calc(100vw - 24px);height:600px;max-height:calc(100vh - 120px);background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.25);display:flex;flex-direction:column;overflow:hidden;z-index:2147483000;font-family:' + CFG.fontFamily + ';color:var(--ijv-secondary);transform:translateY(20px);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .2s ease}',
+    '.ijv-root.ijv-open{transform:translateY(0);opacity:1;pointer-events:auto}',
+    '.ijv-head{background:var(--ijv-primary);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}',
+    '.ijv-head img{height:44px;width:auto;background:#fff;border-radius:10px;padding:6px 10px;flex-shrink:0;display:block}',
+    '.ijv-head .ijv-title{font-weight:700;font-size:15px;line-height:1.2}',
+    '.ijv-head .ijv-sub{font-size:12px;opacity:.85}',
+    '.ijv-head .ijv-actions{margin-left:auto;display:flex;gap:6px}',
+    '.ijv-head button{background:rgba(255,255,255,.15);border:0;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px}',
+    '.ijv-head button:hover{background:rgba(255,255,255,.28)}',
+    '.ijv-msgs{flex:1;overflow-y:auto;padding:16px;background:#FAFAFA;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}',
+    '.ijv-msg{max-width:84%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.45;word-wrap:break-word}',
+    '.ijv-msg p{margin:0 0 6px}.ijv-msg p:last-child{margin:0}',
+    '.ijv-msg ul{margin:4px 0 4px 18px;padding:0}.ijv-msg li{margin:2px 0}',
+    '.ijv-msg a{color:var(--ijv-primary);text-decoration:underline}',
+    '.ijv-msg code{background:rgba(0,0,0,.08);padding:1px 5px;border-radius:4px;font-size:13px}',
+    '.ijv-msg img{max-width:1.2em!important;max-height:1.2em!important;display:inline-block!important;vertical-align:text-bottom!important}',
+    '.ijv-bot{align-self:flex-start;background:#fff;border:1px solid #E8E8E8;border-top-left-radius:4px;color:var(--ijv-secondary)}',
+    '.ijv-user{align-self:flex-end;background:var(--ijv-primary);color:#fff;border-top-right-radius:4px}',
+    '.ijv-user a{color:#fff}',
+    '.ijv-typing{align-self:flex-start;display:flex;gap:4px;padding:10px 14px;background:#fff;border:1px solid #E8E8E8;border-radius:14px;border-top-left-radius:4px}',
+    '.ijv-typing span{width:7px;height:7px;background:var(--ijv-primary);border-radius:50%;opacity:.4;animation:ijvBlink 1.2s infinite}',
+    '.ijv-typing span:nth-child(2){animation-delay:.2s}.ijv-typing span:nth-child(3){animation-delay:.4s}',
+    '@keyframes ijvBlink{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}',
+    '.ijv-cta{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 6px}',
+    '.ijv-pill{background:var(--ijv-accent);color:var(--ijv-primary);border:1px solid rgba(0,0,0,.08);padding:6px 12px;border-radius:999px;font-size:12.5px;cursor:pointer;font-weight:600;transition:all .15s;font-family:inherit}',
+    '.ijv-pill:hover{background:var(--ijv-primary);color:#fff;border-color:var(--ijv-primary)}',
+    '.ijv-form{background:#fff;border:1px solid #E8E8E8;border-radius:12px;padding:14px;margin:8px 0;display:flex;flex-direction:column;gap:8px;align-self:stretch}',
+    '.ijv-form h4{margin:0 0 4px;font-size:14px;color:var(--ijv-secondary)}',
+    '.ijv-form input,.ijv-form textarea{width:100%;padding:9px 11px;border:1px solid #D8D8D8;border-radius:8px;font-size:13.5px;font-family:inherit;color:var(--ijv-secondary);background:#fff}',
+    '.ijv-form input:focus,.ijv-form textarea:focus{outline:none;border-color:var(--ijv-primary)}',
+    '.ijv-form button{background:var(--ijv-primary);color:#fff;border:0;padding:10px;border-radius:8px;font-weight:600;cursor:pointer;font-size:13.5px;font-family:inherit}',
+    '.ijv-form button:disabled{opacity:.6;cursor:wait}',
+    '.ijv-form .ijv-hp{display:none!important}',
+    '.ijv-form .ijv-legal{margin:0;font-size:10.5px;line-height:1.45;color:#8a8a8a}',
+    '.ijv-form .ijv-legal a{color:var(--ijv-primary);text-decoration:underline}',
+    '.ijv-cal{background:linear-gradient(135deg,var(--ijv-primary),var(--ijv-secondary));border-radius:12px;padding:16px;margin:8px 0;align-self:stretch;color:#fff}',
+    '.ijv-cal p{margin:0 0 10px;font-size:13.5px;line-height:1.45}',
+    '.ijv-cal a{display:inline-block;background:#fff;color:var(--ijv-primary);font-weight:700;padding:9px 16px;border-radius:8px;text-decoration:none;font-size:13.5px}',
+    '.ijv-input{display:flex;gap:8px;padding:12px;border-top:1px solid #E8E8E8;background:#fff;align-items:flex-end}',
+    '.ijv-input textarea{flex:1;border:1px solid #D8D8D8;border-radius:12px;padding:10px 12px;font-family:inherit;font-size:14px;resize:none;max-height:100px;min-height:40px;color:var(--ijv-secondary)}',
+    '.ijv-input textarea:focus{outline:none;border-color:var(--ijv-primary)}',
+    '.ijv-input button{background:var(--ijv-primary);color:#fff;border:0;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}',
+    '.ijv-input button:disabled{opacity:.5;cursor:not-allowed}',
+    '.ijv-input button svg{width:18px;height:18px;fill:#fff}',
+    '.ijv-foot{padding:8px 12px 10px;background:#fff;border-top:1px solid #E8E8E8;text-align:center;font-size:10.5px;color:#8a8a8a;line-height:1.5}',
+    '.ijv-foot a{color:var(--ijv-primary);text-decoration:none;font-weight:600}',
+    '.ijv-foot a:hover{text-decoration:underline}',
+    '.ijv-foot .ijv-foot-powered{display:block;margin-top:3px;font-size:10px;color:#9a9a9a}',
+    '.ijv-foot .ijv-foot-powered a{color:#9a9a9a;font-weight:500}',
+    '.ijv-toast{position:absolute;top:70px;left:50%;transform:translateX(-50%);background:var(--ijv-secondary);color:#fff;padding:8px 14px;border-radius:8px;font-size:12.5px;opacity:0;transition:opacity .2s;pointer-events:none}',
+    '.ijv-toast.ijv-show{opacity:.95}',
+    '@media (max-width:480px){.ijv-root{width:calc(100vw - 16px);height:calc(100vh - 90px);bottom:80px;right:8px}.ijv-launcher{bottom:16px;right:16px;height:54px;padding:0 18px}.ijv-launcher img{height:32px}}'
+  ].join('');
+
+  /* ---------------- Render de la UI ---------------- */
+  var styleEl = document.createElement('style');
+  styleEl.textContent = CSS;
+  document.head.appendChild(styleEl);
+
+  var launcher = document.createElement('button');
+  launcher.className = 'ijv-launcher';
+  launcher.setAttribute('aria-label', 'Abrir chat ' + CFG.clientName);
+  launcher.innerHTML = '<img src="' + escapeHtml(CFG.logoUrl) + '" alt="' + escapeHtml(CFG.clientName) + '" />';
+  document.body.appendChild(launcher);
+
+  var root = document.createElement('div');
+  root.className = 'ijv-root';
+  root.setAttribute('role', 'dialog');
+  root.setAttribute('aria-label', 'Chat de ' + CFG.clientName);
+  root.innerHTML =
+    '<div class="ijv-head">' +
+      '<img src="' + escapeHtml(CFG.logoUrl) + '" alt="' + escapeHtml(CFG.clientName) + '" />' +
+      '<div>' +
+        '<div class="ijv-title">' + escapeHtml(CFG.clientName) + '</div>' +
+        '<div class="ijv-sub">' + escapeHtml(CFG.agentName) + ' · ' + escapeHtml(CFG.headerSubtitle) + '</div>' +
+      '</div>' +
+      '<div class="ijv-actions">' +
+        '<button type="button" class="ijv-reset" aria-label="Reiniciar conversación" title="Nueva conversación">⟳</button>' +
+        '<button type="button" class="ijv-close" aria-label="Cerrar chat" title="Cerrar">✕</button>' +
+      '</div>' +
+      '<div class="ijv-toast">Conversación reiniciada</div>' +
+    '</div>' +
+    '<div class="ijv-msgs" aria-live="polite" aria-atomic="false"></div>' +
+    '<div class="ijv-input">' +
+      '<textarea rows="1" maxlength="2000" placeholder="Escribe tu mensaje…" aria-label="Escribe tu mensaje"></textarea>' +
+      '<button type="button" class="ijv-send" aria-label="Enviar">' +
+        '<svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>' +
+      '</button>' +
+    '</div>' +
+    '<div class="ijv-foot">' +
+      'Al usar este chat aceptas la <a href="' + escapeHtml(CFG.privacyUrl) + '" target="_blank" rel="noopener">política de privacidad</a> de ' + escapeHtml(CFG.clientName) + '.' +
+      '<span class="ijv-foot-powered"><a href="https://ijvagency.com/" target="_blank" rel="noopener">Powered by IJV</a></span>' +
+    '</div>';
+  document.body.appendChild(root);
+
+  /* Logo con fallback: si la URL del logo falla (típico en demos con dominio
+   * ficticio, o si el sitio del cliente mueve el archivo), el launcher cae a un
+   * ícono de chat y el header oculta la imagen rota — nunca se ve un img roto. */
+  var CHAT_ICON = '<svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12 3C6.48 3 2 6.94 2 11.5c0 2.3 1.13 4.38 2.97 5.88L4 21l4.02-1.6c1.2.38 2.5.6 3.98.6 5.52 0 10-3.94 10-8.5S17.52 3 12 3z"/></svg>';
+  var lImg = launcher.querySelector('img');
+  if (lImg) {
+    var lFallback = function () { launcher.innerHTML = CHAT_ICON; };
+    lImg.onerror = lFallback;
+    if (lImg.complete && lImg.naturalWidth === 0) lFallback();
+  }
+  var hImg = root.querySelector('.ijv-head img');
+  if (hImg) {
+    var hFallback = function () { hImg.style.display = 'none'; };
+    hImg.onerror = hFallback;
+    if (hImg.complete && hImg.naturalWidth === 0) hFallback();
+  }
+
+  var $msgs  = root.querySelector('.ijv-msgs');
+  var $input = root.querySelector('textarea');
+  var $send  = root.querySelector('.ijv-send');
+  var $close = root.querySelector('.ijv-close');
+  var $reset = root.querySelector('.ijv-reset');
+  var $toast = root.querySelector('.ijv-toast');
+
+  var isOpen = false;
+  var isBusy = false;
+  var welcomed = false;
+
+  /* Regla #19: rAF obligatorio — sin él Safari/iOS deja el scroll anclado
+   * arriba mientras el bot escribe. */
+  function scrollToBottom() {
+    $msgs.scrollTop = $msgs.scrollHeight;
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(function () { $msgs.scrollTop = $msgs.scrollHeight; });
+    }
+  }
+  function showToast(t) {
+    $toast.textContent = t;
+    $toast.classList.add('ijv-show');
+    setTimeout(function () { $toast.classList.remove('ijv-show'); }, 1800);
+  }
+  function pushUser(text, opts) {
+    var div = document.createElement('div');
+    div.className = 'ijv-msg ijv-user';
+    div.textContent = text;
+    $msgs.appendChild(div);
+    scrollToBottom();
+    if (!opts || !opts.skipSave) saveMessage('user', text);
+  }
+  function pushBot(text, opts) {
+    opts = opts || {};
+    var div = document.createElement('div');
+    div.className = 'ijv-msg ijv-bot';
+    $msgs.appendChild(div);
+    if (!opts.skipSave) saveMessage('bot', text);
+    if (CFG.typewriter && !opts.instant) {
+      typewrite(div, text);
+    } else {
+      div.innerHTML = parseMd(text);
+      scrollToBottom();
+    }
+    return div;
+  }
+  /* Typewriter: re-parsea markdown en cada step y scrollea con rAF (regla #19) */
+  function typewrite(div, fullText) {
+    var i = 0;
+    var step = Math.max(1, Math.round(CFG.typewriterCps / 30));
+    var timer = setInterval(function () {
+      i += step;
+      if (i >= fullText.length) {
+        clearInterval(timer);
+        div.innerHTML = parseMd(fullText);
+        scrollToBottom();
+        return;
+      }
+      div.innerHTML = parseMd(fullText.slice(0, i));
+      scrollToBottom();
+    }, 33);
+  }
+  function pushCTA(buttons) {
+    var row = document.createElement('div');
+    row.className = 'ijv-cta';
+    buttons.forEach(function (b) {
+      var p = document.createElement('button');
+      p.type = 'button';
+      p.className = 'ijv-pill';
+      p.textContent = b.label;
+      p.addEventListener('click', b.onClick);
+      row.appendChild(p);
+    });
+    $msgs.appendChild(row);
+    scrollToBottom();
+    return row;
+  }
+  function showTyping() {
+    var t = document.createElement('div');
+    t.className = 'ijv-typing';
+    t.innerHTML = '<span></span><span></span><span></span>';
+    $msgs.appendChild(t);
+    scrollToBottom();
+    return t;
+  }
+  function removeEl(el) { if (el && el.parentNode) el.parentNode.removeChild(el); }
+
+  /* ---------------- Call al webhook del agente ---------------- */
+  function callAgent(message, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var timer = setTimeout(function () { ctrl.abort(); }, CFG.timeoutMs);
+    return fetch(CFG.webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: message,
+        sessionId: getSessionId(),
+        origin: window.location.origin,
+        channel: 'web'
+      }),
+      signal: ctrl.signal
+    })
+    .then(function (r) {
+      clearTimeout(timer);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .catch(function (err) {
+      clearTimeout(timer);
+      if (attempt < CFG.maxRetries) return callAgent(message, attempt + 1);
+      throw err;
+    });
+  }
+
+  /* ---------------- Lead form (honeypot anti-bot) ---------------- */
+  function showLeadForm(prefill) {
+    if ($msgs.querySelector('.ijv-form')) { scrollToBottom(); return; }
+    prefill = prefill || {};
+    var form = document.createElement('form');
+    form.className = 'ijv-form';
+    form.innerHTML =
+      '<h4>Déjanos tus datos y te contactamos</h4>' +
+      '<input type="text" name="nombre" placeholder="Nombre completo *" required value="' + escapeHtml(prefill.nombre || '') + '">' +
+      '<input type="email" name="email" placeholder="Correo electrónico *" required value="' + escapeHtml(prefill.email || '') + '">' +
+      '<input type="tel" name="telefono" placeholder="Teléfono / WhatsApp (opcional)" value="' + escapeHtml(prefill.telefono || '') + '">' +
+      '<textarea name="consulta" rows="2" placeholder="Cuéntanos brevemente (opcional)"></textarea>' +
+      '<input type="text" name="hp" class="ijv-hp" tabindex="-1" autocomplete="off">' +
+      /* Línea legal del formulario: el footer del chat enlaza la política, pero el
+       * formulario es donde el usuario ENTREGA sus datos — ahí tiene que estar el
+       * enlace (regla #14, misma lógica) y el recordatorio de qué NO mandar por
+       * este medio. La segunda frase se ajusta al vertical: un prestador de salud
+       * (legal.datos_salud) pide explícitamente no enviar estudios clínicos. */
+      '<p class="ijv-legal">Al enviar aceptas el tratamiento de tus datos conforme al ' +
+        '<a href="' + escapeHtml(CFG.privacyUrl) + '" target="_blank" rel="noopener">aviso de privacidad</a>. ' +
+        'No compartas por este medio información sensible ni documentos personales.</p>' +
+      '<button type="submit">Enviar</button>';
+    $msgs.appendChild(form);
+    scrollToBottom();
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      var fd = new FormData(form);
+      fetch(CFG.leadsWebhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: fd.get('nombre'),
+          email: fd.get('email'),
+          telefono: fd.get('telefono'),
+          consulta: fd.get('consulta'),
+          hp: fd.get('hp'),
+          session_id: getSessionId(),
+          origin: window.location.origin
+        })
+      })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r; })
+      .then(function () {
+        removeEl(form);
+        pushBot('¡Listo! Recibimos tus datos. El equipo de ' + CFG.clientName + ' te contacta muy pronto.', { instant: true });
+        afterLeadCTA();
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Reintentar';
+        pushBot('Hubo un problema al enviar. Por favor intenta de nuevo.', { instant: true });
+      });
+    });
+  }
+
+  /* Regla #20: el usuario que dejó datos está CALIENTE — no cerrar con
+   * "te escribimos pronto" seco: CTA inmediato a Calendly / WhatsApp. */
+  function afterLeadCTA() {
+
+
+    pushCTA([
+      { label: 'Escribir por WhatsApp', onClick: function () { window.open(CFG.whatsappLink, '_blank'); } }
+    ]);
+
+  }
+
+  /* ---------------- Intent helpers ---------------- */
+
+  function wantsWhatsapp(text) {
+    return /\b(wh?at?s?app|wsp|whats|wasap)\b/i.test(text || '');
+  }
+
+  function wantsContactForm(text) {
+    return /\b(lead|llama(me|r)|mis datos|dejo mis datos|d[ée]jame datos|quiero que me contacten)\b/i.test(text || '');
+  }
+
+  /* ---------------- Envío de mensajes ---------------- */
+  function send(text) {
+    text = (text || '').trim();
+    if (!text || isBusy) return;
+    pushUser(text);
+    $input.value = '';
+    autoSize();
+    isBusy = true;
+    $send.disabled = true;
+
+    var typing = showTyping();
+
+    callAgent(text)
+      .then(function (data) {
+        removeEl(typing);
+        var reply = (data && (data.output || data.response || data.text)) || 'Disculpa, no pude procesar tu mensaje. ¿Puedes reformularlo?';
+        pushBot(reply);
+
+        var showsForm = (data && (data.lead_intent || data.showForm)) || wantsContactForm(text);
+        var wantsContactBtn = /\b(equipo|contactar|asesor|coordinar)\b/i.test(reply);
+        var ctas = [];
+
+        if ((data && data.whatsapp) || wantsWhatsapp(text)) {
+          ctas.push({ label: 'WhatsApp ' + CFG.whatsappNumber, onClick: function () { window.open(CFG.whatsappLink, '_blank'); } });
+        }
+
+        /* Regla #18: botón persistente, NUNCA auto-open que tape la respuesta */
+        if (wantsContactBtn && !showsForm) {
+          ctas.push({ label: 'Contactar al equipo', onClick: function () { showLeadForm({ nombre: data && data.nombre, email: data && data.email, telefono: data && data.telefono }); } });
+        }
+        if (ctas.length) pushCTA(ctas);
+        if (showsForm) showLeadForm({ nombre: data && data.nombre, email: data && data.email, telefono: data && data.telefono });
+      })
+      .catch(function () {
+        removeEl(typing);
+        pushBot('Ups, tuve un problema de conexión. ¿Puedes intentarlo de nuevo? También puedes escribirnos por WhatsApp al **' + CFG.whatsappNumber + '**.', { instant: true });
+
+        pushCTA([{ label: 'WhatsApp', onClick: function () { window.open(CFG.whatsappLink, '_blank'); } }]);
+
+      })
+      .then(function () {
+        isBusy = false;
+        $send.disabled = false;
+        $input.focus();
+      });
+  }
+
+  /* ---------------- Auto-resize textarea ---------------- */
+  function autoSize() {
+    $input.style.height = 'auto';
+    $input.style.height = Math.min($input.scrollHeight, 100) + 'px';
+  }
+  $input.addEventListener('input', autoSize);
+  $input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      send($input.value);
+    }
+  });
+  $send.addEventListener('click', function () { send($input.value); });
+
+  /* ---------------- Welcome + quick buttons ---------------- */
+  function showWelcome() {
+    /* El welcome NO pasa por send(): jamás dispara detección de lead (regla #18) */
+    pushBot(CFG.welcomeMessage, { instant: true, skipSave: true });
+    if (QUICK_BUTTONS.length) {
+      pushCTA(QUICK_BUTTONS.map(function (b) {
+        return { label: b.label, onClick: function () { send(b.mensaje); } };
+      }));
+    }
+  }
+  function restoreHistory() {
+    var hist = loadMessages();
+    if (!hist.length) return false;
+    hist.forEach(function (m) {
+      if (m.role === 'user') pushUser(m.text, { skipSave: true });
+      else pushBot(m.text, { instant: true, skipSave: true });
+    });
+    return true;
+  }
+
+  /* ---------------- Open / close / reset ---------------- */
+  function openChat() {
+    isOpen = true;
+    root.classList.add('ijv-open');
+    launcher.style.display = 'none';
+    if (!welcomed) {
+      welcomed = true;
+      getSessionId(); /* aplica TTL antes de restaurar */
+      if (!restoreHistory()) showWelcome();
+    }
+    setTimeout(function () { $input.focus(); }, 200);
+  }
+  function closeChat() {
+    isOpen = false;
+    root.classList.remove('ijv-open');
+    launcher.style.display = 'flex';
+  }
+  launcher.addEventListener('click', openChat);
+  $close.addEventListener('click', closeChat);
+  $reset.addEventListener('click', function () {
+    resetSession();
+    $msgs.innerHTML = '';
+    showToast('Conversación reiniciada');
+    setTimeout(showWelcome, 250);
+  });
+
+  /* ---------------- API pública opcional ---------------- */
+  window.bonterraAgent = {
+    open:  openChat,
+    close: closeChat,
+    reset: function () { $reset.click(); },
+    send:  send
+  };
+})();
+
+  </script>
+</body>
+</html>
